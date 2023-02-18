@@ -3,10 +3,10 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="RASAT: Integrating Relational Structures into Pretrained Seq2Seq Model for Text-to-SQL">
-  <meta name="keywords" content="text-to-SQL, relation-aware self-attention, T5, semantic-parsing">
+  <meta name="description" content="Text Classiﬁcation in the Wild: A Large-Scale Long-Tailed Name Normalization Dataset">
+  <meta name="keywords" content="Text Classification, Long-tail, Few-shot">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RASAT: Integrating Relational Structures into Pretrained Seq2Seq Model for Text-to-SQL</title>
+  <title>Text Classiﬁcation in the Wild: A Large-Scale Long-Tailed Name Normalization Dataset</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -99,31 +99,28 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">RASAT: Integrating Relational Structures into Pretrained Seq2Seq Model for Text-to-SQL
+            <h1 class="title is-1 publication-title">Text Classiﬁcation in the Wild: A Large-Scale Long-Tailed Name Normalization Dataset
             </h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
                 <a href="https://jiexingqi.github.io/">Jiexing Qi</a><sup>1</sup>,</span>
               <span class="author-block">
-                <a href="#">Jingyao Tang</a><sup>1</sup>,</span>
+                <a href="#">Shuhao Li</a><sup>1</sup>,</span>
               <span class="author-block">
-                <a href="#">Ziwei He</a><sup>1</sup>,
+                <a href="#">Zhixin Guo</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="#">Xiangpeng Wan</a><sup>2</sup>,
-              </span>
-              <span class="author-block">
-                <a href="#">Yu Cheng</a><sup>3</sup>,
+                <a href="#">Yusheng Huang</a><sup>1</sup>,
               </span>
 			  <br/>
               <span class="author-block">
-                <a href="#">Chenghu Zhou</a><sup>1,4</sup>,
+                <a href="#">Chenghu Zhou</a><sup>1,2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="#">Weinan Zhang</a><sup>1</sup>,
               </span>
               <span class="author-block">
                 <a href="#">Xinbing Wang</a><sup>1</sup>,
-              </span>
-              <span class="author-block">
-                <a href="#">Quanshi Zhang</a><sup>1</sup>,
               </span>
               <span class="author-block">
                 <a href="https://hantek.github.io/">Zhouhan Lin</a><sup>1,*</sup>,
@@ -132,9 +129,7 @@
 
             <div class="is-size-5 publication-authors">
               <span class="author-block"><sup>1</sup>Shanghai Jiao Tong University,</span>
-              <span class="author-block"><sup>2</sup>NetMind.AI and ProtagoLabs,</span>
-              <span class="author-block"><sup>3</sup>Microsoft Research, Redmond,</span>
-              <span class="author-block"><sup>4</sup>IGSNRR, Chinese Academy of Sciences</span>
+              <span class="author-block"><sup>2</sup>IGSNRR, Chinese Academy of Sciences</span>
             </div>
 
             <div class="column has-text-centered">
@@ -182,8 +177,8 @@
     <div class="container is-max-desktop">
       <div class="hero-body">
         <h2 class="subtitle has-text-centered">
-          RASAT is a Transformer seq2seq architecture augmented with relation-aware self-attention that could leverage a variety of relational structures while inheriting the pretrained parameters 
-          from the T5 model effectively. It could handle single-turn and multi-turn text-to-SQL semantic parsing tasks and achieved State-Of-The-Art performance on Spider, SParC and CoSQL dataset.
+          LoT-insts contains over 25k classes whose frequencies are naturally long-tail distributed. Its test set from four different subsets: many-, medium-, and few-shot sets, 
+          as well as a zero-shot open set. To our best knowledge, this is the first natural language dataset that focuses on this long-tailed and open classification problem.
         </h2>
         <img src="static/images/fig1-example.jpg">
       </div>
@@ -199,30 +194,22 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Relational structures such as schema linking
-              and schema encoding have been validated as a
-              key component to qualitatively translating nat-
-              ural language into SQL queries. However, in-
-              troducing these structural relations comes with
-              prices: they often result in a specialized model
-              structure, which largely prohibits using large
-              pretrained models in text-to-SQL. To address
-              this problem, we propose RASAT: a Trans-
-              former seq2seq architecture augmented with
-              relation-aware self-attention that could lever-
-              age a variety of relational structures while in-
-              heriting the pretrained parameters from the T5
-              model effectively. Our model can incorpo-
-              rate almost all types of existing relations in
-              the literature, and in addition, we propose in-
-              troducing co-reference relations for the multi-
-              turn scenario. Experimental results on three
-              widely used text-to-SQL datasets, covering
-              both single-turn and multi-turn scenarios, have
-              shown that RASAT could achieve state-of-the-
-              art results across all three benchmarks (75.5%
-              EX on Spider, 52.6% IEX on SParC, and
-              37.4% IEX on CoSQL).
+              Real-world data usually exhibits a long-tailed distribution, 
+              with a few frequent labels and a lot of few-shot labels. The study of 
+              institution name normalization is a perfect application case showing this phenomenon: 
+              there are many institutions around the world with enormous variations of their names in the publicly available literature. 
+              In this work, we first collect a large-scale institution name normalization dataset LoT-insts, 
+              which containing over 25k classes whose frequencies are naturally long-tail distributed. 
+              We construct our test set from four different subsets: many-, medium-, and few-shot sets, 
+              as well as a zero-shot open set, which are meant to isolate the few-shot and zero-shot 
+              learning scenarios out from the massive many-shot classes. We also replicate several 
+              important baseline methods on our data, covering a wide range from search-based methods 
+              to neural network methods that use the pretrained BERT model. Further, we propose our specially pretrained,
+              BERT-based model that shows better out-of-distribution generalization on few-shot and zero-shot test sets. 
+              Compared to other datasets focusing on the longtailed phenomenon, our dataset has one order magnitude more 
+              training data than the largest existing long-tailed datasets and is naturally long-tailed rather than manually synthesized.
+              We believe it provides an important and different scenario to study this problem. 
+              To our best knowledge, this is the first natural language dataset that focuses on this long-tailed and open classification problem.
             </p>
           </div>
         </div>
@@ -360,256 +347,6 @@
     </div>
   </section>
 
-
-  <section class="section">
-    <div class="container is-max-desktop">
-      <!-- Perturbation and Prompt. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Perturbation and Prompt</h2>
-          <div class="content has-text-justified">
-            <p>
-              For questions from StackOverflow, we equipped them with prompts, test cases, and evaluation functions and
-              called them Origin.
-              To prevent models simply recalling the solutions seen during pre-training, we have perturbed the questions
-              in two ways:
-              surface perturbations and semantic perturbations.
-              To make DS-1000 more challenging, we additionally introduced Difficult Rewrite.
-            </p>
-
-            <ul>
-              <li><strong>Origin:</strong> &nbsp; Equipped them with a prompt, testcases, and an evaluation function.
-              </li>
-              <li><strong>Surface Perturbation:</strong> &nbsp; We paraphrased the question or modified the code context
-                in
-                the question, but the reference solution should stay the same after the perturbation. </li>
-              <li><strong>Semantic Perturbation:</strong> &nbsp; We changed the semantics of the reference solution
-                without
-                changing its difficulty.</li>
-              <li><strong>Difficult Rewrite:</strong> &nbsp; More complex and more difficult.</li>
-            </ul>
-
-            <p>
-              We also provided an Insertion style prompt and a Completion style prompt for each question (including
-              perturbation).
-            </p>
-
-            <ul>
-              <li><strong>Insertion:</strong> &nbsp; Models need to predict what should be written in the place of
-                "[insert]".</li>
-              <li><strong>Completion:</strong> &nbsp; Models need to predict what should b written after the prompt.
-              </li>
-            </ul>
-
-            <p>
-              Here is the performance of Codex-davinci-002 on DS-1000.
-            </p>
-
-            <img src="static/images/codex002_result.png">
-
-            <p>
-              Here are more prompts, you can copy them and run the models on the
-              playground of <a class="link" href="https://openai.com/api/">OpenAI</a>.
-            </p>
-            
-            <div class="tabs is-centered code_expl_lst">
-              <ul>
-                <li title="Insertion" class="is-active"><a>Insertion</a></li>
-                <li title="Completion"><a>Completion</a></li>
-                <li title="Surface-Perturbation"><a>Surface Perturbation</a></li>
-                <li title="Semantic-Perturbation"><a>Semantic Perturbation</a></li>
-                <li title="Difficult-Rewrite"><a>Difficult Rewrite</a></li>
-              </ul>
-            </div>
-
-            <script type="text/javascript">
-              document.querySelectorAll(".code_expl_lst li").forEach(e => {
-                e.addEventListener("click", Click)
-              })
-
-              function Click(eve)
-              {
-                const iTxt = eve.srcElement.parentElement.title
-                for(let v of document.querySelectorAll(".code_expl_lst li"))
-                {
-                  if(iTxt === v.title)
-                  {
-                    v.className = "is-active";
-                  } else {
-                    v.className = "";
-                  }
-                }
-                for(let block of document.getElementsByClassName('examples'))
-                {
-                  block.style.display = (block.title === iTxt) ? 'block' : 'none';
-                }
-              }
-
-            </script>
-
-            <div title="Insertion" class="examples" style="display: block;">
-              <p>
-                Insertion:
-              </p>
-
-              <div class="highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>Problem:
-Let's say I have a 1d numpy positive integer array like this:
-a = array([1,0,3])
-I would like to encode this as a 2D one-hot array(for natural number)
-b = array([[0,1,0,0], [1,0,0,0], [0,0,0,1]])
-The leftmost element corresponds to 0 in `a`(NO MATTER whether 0 appears in `a` or not.), and the rightmost vice versa.
-Is there a quick way to do this only using numpy? Quicker than just looping over a to set elements of b, that is.
-A:
-&lt;code&gt;
-import numpy as np
-a = np.array([1, 0, 3])
-&lt;/code&gt;
-BEGIN SOLUTION
-&lt;code&gt;
-[insert]
-&lt;/code&gt;
-END SOLUTION
-&lt;code&gt;
-print(b)
-&lt;/code&gt;
-</code></pre>
-                </div>
-              </div>
-            </div>
-
-            <div title="Completion" class="examples" style="display: none;">
-              <p>
-                Completion:
-              </p>
-
-              <div class="highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>Problem:
-Let's say I have a 1d numpy positive integer array like this:
-a = array([1,0,3])
-I would like to encode this as a 2D one-hot array(for natural number)
-b = array([[0,1,0,0], [1,0,0,0], [0,0,0,1]])
-The leftmost element corresponds to 0 in `a`(NO MATTER whether 0 appears in `a` or not.), and the rightmost vice versa.
-Is there a quick way to do this only using numpy? Quicker than just looping over a to set elements of b, that is.
-A:
-&lt;code&gt;
-import numpy as np
-a = np.array([1, 0, 3])
-&lt;/code&gt;
-b = ... # put solution in this variable
-BEGIN SOLUTION
-&lt;code&gt;
-</code></pre>
-                </div>
-              </div>
-            </div>
-
-            <div title="Surface-Perturbation" class="examples" style="display: none;">
-              <p>
-                Surface Perturbation:
-              </p>
-
-              <div class="highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>Problem:
-Let's say I have a 1d numpy positive integer array like this
-a = array([1,2,3])
-I would like to encode this as a 2D one-hot array(for natural number)
-b = array([[0,1,0,0], [0,0,1,0], [0,0,0,1]])
-The leftmost element corresponds to 0 in `a`(NO MATTER whether 0 appears in `a` or not.), and the rightmost corresponds to the largest number.
-Is there a quick way to do this only using numpy? Quicker than just looping over a to set elements of b, that is.
-A:
-&lt;code&gt;
-import numpy as np
-a = np.array([1, 0, 3])
-&lt;/code&gt;
-BEGIN SOLUTION
-&lt;code&gt;
-[insert]
-&lt;/code&gt;
-END SOLUTION
-&lt;code&gt;
-print(b)
-&lt;/code&gt;
-</code></pre>
-                </div>
-              </div>
-            </div>
-
-            <div title="Semantic-Perturbation" class="examples" style="display: none;">
-              <p>
-                Semantic Perturbation:
-              </p>
-
-              <div class="highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>Problem:
-Let's say I have a 1d numpy integer array like this
-a = array([-1,0,3])
-I would like to encode this as a 2D one-hot array(for integers)
-b = array([[1,0,0,0,0], [0,1,0,0,0], [0,0,0,0,1]])
-The leftmost element always corresponds to the smallest element in `a`, and the rightmost vice versa.
-Is there a quick way to do this only using numpy? Quicker than just looping over a to set elements of b, that is.
-A:
-&lt;code&gt;
-import numpy as np
-a = np.array([-1, 0, 3])
-&lt;/code&gt;
-BEGIN SOLUTION
-&lt;code&gt;
-[insert]
-&lt;/code&gt;
-END SOLUTION
-&lt;code&gt;
-print(b)
-&lt;/code&gt;
-</code></pre>
-                </div>
-              </div>
-            </div>
-
-            <div title="Difficult-Rewrite" class="examples" style="display: none;">
-              <p>
-                Difficult Rewrite:
-              </p>
-
-              <div class="highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>Problem:
-Let's say I have a 1d numpy array like this
-a = np.array([1.5,-0.4,1.3])
-I would like to encode this as a 2D one-hot array(only for elements appear in `a`)
-b = array([[0,0,1], [1,0,0], [0,1,0]])
-The leftmost element always corresponds to the smallest element in `a`, and the rightmost vice versa.
-Is there a quick way to do this only using numpy? Quicker than just looping over a to set elements of b, that is.
-A:
-&lt;code&gt;
-import numpy as np
-a = np.array([1.5, -0.4, 1.3])
-&lt;/code&gt;
-BEGIN SOLUTION
-&lt;code&gt;
-[insert]
-&lt;/code&gt;
-END SOLUTION
-&lt;code&gt;
-print(b)
-&lt;/code&gt;
-</code></pre>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-      <!--/ Perturbation and Prompt. -->
-    </div>
-  </section>
-
-
   <section class="section">
     <div class="container is-max-desktop">
       <!-- Comparison. -->
@@ -648,7 +385,7 @@ print(b)
     <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
-            <h2 class="title is-3">Baselines</h2>
+            <h2 class="title is-3">Experiment Leaderboard</h2>
           </div>
         </div>
       </div>
@@ -660,155 +397,141 @@ print(b)
             <div class="infoCard">
               <div class="infoBody">
                 <p align="left">
-                  <div class="left">Notice: t=temperature, top-p=top-p cutoff, len = max generation length
-                  </div>
                 </p>
                 <table class="table performanceTable">
                   <tr>
                     <th>Rank</th>
                     <th>Model</th>
-                    <th>Details</th>
-                    <th>Score</th>
+                    <th>Macro-F1</th>
+                    <th>Accuracy</th>
                   </tr>
 
                   <tr>
                     <td>
                       <p>1</p>
                       <span class="date label label-default">
-                        Nov 08, 2022
+                        Feb 15, 2023
                       </span>
                     </td>
                     <td style="word-break:break-word;">
-                      codex-davinci-002
-                      <p class="institution">OpenAI</p>
-                      <a class="link" href="https://arxiv.org/abs/2107.03374">Chen et al., '21</a>
+                      Character-BERT + RS
+                      <p class="institution">SJTU LUMIA</p>
+                      <a class="link" href="https://arxiv.org/abs/2107.03374">Qi et al., ICASSP'23</a>
                     </td>
-                    <td style="word-break:break-word;">
-                      Insertion
-                      <p>t=0.2, top-p=0.95</p>
-                      <p>len = 1024</p>
-                    </td>
-                    <td>43.3</td>
+                    <td><br><b>65.90</b></td>
+                    <td><br>83.73</td>
                   </tr>
 
                   <tr>
                     <td>
                       <p>2</p>
                       <span class="date label label-default">
-                        Nov 08, 2022
+                        Feb 15, 2023
                       </span>
                     </td>
                     <td style="word-break:break-word;">
-                      codex-davinci-002
-                      <p class="institution">OpenAI</p>
-                      <a class="link" href="https://arxiv.org/abs/2107.03374">Chen et al., '21</a>
+                      BERT + RS +FP
+                      <p class="institution">SJTU LUMIA</p>
+                      <a class="link" href="https://arxiv.org/abs/2107.03374">Qi et al., ICASSP'23</a>
                     </td>
-                    <td style="word-break:break-word;">
-                      Completion
-                      <p>t=0.2, top-p=0.95</p>
-                      <p>len = 1024</p>
-                    </td>
-                    <td>39.2</td>
+                    <td><br>65.14</td>
+                    <td><br><b>84.00</b></td>
                   </tr>
 
                   <tr>
                     <td>
                       <p>3</p>
                       <span class="date label label-default">
-                        Nov 08, 2022
+                        Feb 15, 2023
                       </span>
                     </td>
                     <td style="word-break:break-word;">
-                      codex-davinci-001
-                      <p class="institution">OpenAI</p>
-                      <a class="link" href="https://arxiv.org/abs/2107.03374">Chen et al., '21</a>
+                      BERT + RS
+                      <p class="institution">SJTU LUMIA</p>
+                      <a class="link" href="https://arxiv.org/abs/2107.03374">Qi et al., ICASSP'23</a>
                     </td>
-                    <td style="word-break:break-word;">
-                      Completion
-                      <p>t=0.2, top-p=0.95</p>
-                      <p>len = 1024</p>
-                    </td>
-                    <td>20.2</td>
+                    <td><br>63.98</td>
+                    <td><br>83.40</td>
                   </tr>
 
                   <tr>
                     <td>
                       <p>4</p>
                       <span class="date label label-default">
-                        Nov 08, 2022
+                        Feb 15, 2023
                       </span>
                     </td>
                     <td style="word-break:break-word;">
-                      codex-cushman-001
-                      <p class="institution">OpenAI</p>
-                      <a class="link" href="https://arxiv.org/abs/2107.03374">Chen et al., '21</a>
+                      BERT 
+                      <p class="institution">Google AI Language</p>
+                      <a class="link" href="https://arxiv.org/pdf/1810.04805">Devlin et al., NAACL'19</a>
                     </td>
-                    <td style="word-break:break-word;">
-                      Completion
-                      <p>t=0.2, top-p=0.95</p>
-                      <p>len = 1024</p>
-                    </td>
-                    <td>18.1</td>
+                    <td><br>62.79</td>
+                    <td><br>83.30</td>
                   </tr>
 
                   <tr>
                     <td>
                       <p>5</p>
                       <span class="date label label-default">
-                        Nov 08, 2022
+                        Feb 15, 2023
                       </span>
                     </td>
                     <td style="word-break:break-word;">
-                      CodeGen-6B
-                      <p class="institution">Salesforce Research</p>
-                      <a class="link" href="https://arxiv.org/abs/2203.13474">Nijkamp et al., '22</a>
+                      CompanyDepot v1
+                      <p class="institution">CareerBuilder</p>
+                      <a class="link" href="https://www.kdd.org/kdd2016/papers/files/adp0770-liuA.pdf">Liu et al., KDD'16</a>
                     </td>
-                    <td style="word-break:break-word;">
-                      Completion
-                      <p>t=0.2, top-p=0.95</p>
-                      <p>len = 1024</p>
-                    </td>
-                    <td>8.4</td>
+                    <td><br>59.64</td>
+                    <td><br>79.97</td>
                   </tr>
 
                   <tr>
                     <td>
                       <p>6</p>
                       <span class="date label label-default">
-                        Nov 08, 2022
+                        Feb 15, 2023
                       </span>
                     </td>
                     <td style="word-break:break-word;">
-                      InCoder-6B
-                      <p class="institution">Facebook AI</p>
-                      <a class="link" href="https://arxiv.org/abs/2204.05999">Fried et al., '22</a>
+                      sCool
+                      <p class="institution">CareerBuilder</p>
+                      <a class="link" href="https://ieeexplore.ieee.org/document/6867547">Jacob et al., CTS'14</a>
                     </td>
-                    <td style="word-break:break-word;">
-                      Insertion
-                      <p>t=0.2, top-p=0.95</p>
-                      <p>len = 1024</p>
-                    </td>
-                    <td>7.5</td>
+                    <td><br>52.41</td>
+                    <td><br>76.72</td>
                   </tr>
 
                   <tr>
                     <td>
                       <p>7</p>
                       <span class="date label label-default">
-                        Nov 08, 2022
+                        Feb 15, 2023
                       </span>
                     </td>
                     <td style="word-break:break-word;">
-                      InCoder-6B
-                      <p class="institution">Facebook AI</p>
-                      <a class="link" href="https://arxiv.org/abs/2204.05999">Fried et al., '22</a>
+                      Naive Bayes
+                      <p class="institution">The RAND Corporation</p>
+                      <a class="link" href="https://dl.acm.org/doi/pdf/10.1145/321075.321084">Melvin Earl Maron, JACM'61</a>
+                    </td>
+                    <td><br>50.20</td>
+                    <td><br>72.20</td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <p>8</p>
+                      <span class="date label label-default">
+                        Feb 15, 2023
+                      </span>
                     </td>
                     <td style="word-break:break-word;">
-                      Completion
-                      <p>t=0.2, top-p=0.95</p>
-                      <p>len = 1024</p>
+                      FastText
+                      <p class="institution">Facebook AI Research</p>
+                      <a class="link" href="https://aclanthology.org/E17-2068/">Joulin et al., EACL'17</a>
                     </td>
-                    <td>7.4</td>
+                    <td><br>44.38</td>
+                    <td><br>74.93</td>
                   </tr>
 
                 </table>
@@ -835,7 +558,7 @@ print(b)
       <div class="bibtex-body">
         <h2 class="title">BibTeX</h2>
         <pre><code>@article{Lai2022DS1000,
-  title={RASAT: Integrating Relational Structures into Pretrained Seq2Seq Model for Text-to-SQL},
+  title={Text Classiﬁcation in the Wild: A Large-Scale Long-Tailed Name Normalization Dataset},
   author={Yuhang Lai and Chengxi Li and Yiming Wang and Tianyi Zhang and Ruiqi Zhong and Luke Zettlemoyer and Scott Wen-tau Yih and Daniel Fried and Sida Wang and Tao Yu},
   journal={ArXiv},
   year={2022},
