@@ -1,6 +1,6 @@
-# DS-1000
+# LoT-insts
 
-This is the repository that contains source code for the [DS-1000 website](https://ds1000-code-gen.github.io).
+This is the repository that contains source code for the [LoT-insts website](https://lot-insts.github.io/).
 
 ```
 
