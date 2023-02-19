@@ -68,23 +68,8 @@
             More Research
           </a>
           <div class="navbar-dropdown">
-            <a class="navbar-item" href="https://yale-lily.github.io/spider">
-              Spider
-            </a>
-            <a class="navbar-item" href="https://unifiedskg.com">
-              UnifiedSKG
-            </a>
-            <a class="navbar-item" href="https://github.com/Yushi-Hu/IC-DST">
-              IC-DST
-            </a>
-            <a class="navbar-item" href="https://github.com/HKUNLP/icl-selective-annotation">
-              Selective Annotation
-            </a>
-            <a class="navbar-item" href="https://lm-code-binder.github.io/">
-              Binder
-            </a>
-            <a class="navbar-item" href="https://instructor-embedding.github.io/">
-              Instructor
+            <a class="navbar-item" href="https://rasat-sql.github.io/">
+              RASAT
             </a>
           </div>
         </div>
@@ -99,37 +84,36 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Text Classiﬁcation in the Wild: A Large-Scale Long-Tailed Name Normalization Dataset
+            <h1 class="title is-1 publication-title">LoT-insts
             </h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a href="https://jiexingqi.github.io/">Jiexing Qi</a><sup>1</sup>,</span>
+                <a href="https://jiexingqi.github.io/">Jiexing Qi</a>,</span>
               <span class="author-block">
-                <a href="#">Shuhao Li</a><sup>1</sup>,</span>
+                <a href="#">Shuhao Li</a>,</span>
               <span class="author-block">
-                <a href="#">Zhixin Guo</a><sup>1</sup>,
+                <a href="#">Zhixin Guo</a>,
               </span>
               <span class="author-block">
-                <a href="#">Yusheng Huang</a><sup>1</sup>,
+                <a href="#">Yusheng Huang</a>,
               </span>
 			  <br/>
               <span class="author-block">
-                <a href="#">Chenghu Zhou</a><sup>1,2</sup>,
+                <a href="#">Chenghu Zhou</a>,
               </span>
               <span class="author-block">
-                <a href="#">Weinan Zhang</a><sup>1</sup>,
+                <a href="#">Weinan Zhang</a>,
               </span>
               <span class="author-block">
-                <a href="#">Xinbing Wang</a><sup>1</sup>,
+                <a href="#">Xinbing Wang</a>,
               </span>
               <span class="author-block">
-                <a href="https://hantek.github.io/">Zhouhan Lin</a><sup>1,*</sup>,
+                <a href="https://hantek.github.io/">Zhouhan Lin</a><sup>*</sup>,
               </span>
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block"><sup>1</sup>Shanghai Jiao Tong University,</span>
-              <span class="author-block"><sup>2</sup>IGSNRR, Chinese Academy of Sciences</span>
+              <span class="author-block">Shanghai Jiao Tong University,</span>
             </div>
 
             <div class="column has-text-centered">
@@ -155,15 +139,15 @@
                   </a>
                 </span>
                 <!-- Talk Link. -->
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="https://www.techbeat.net/talk-info?id=719"
                      class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="far fa-images"></i>
                     </span>
-                    <span>Talk</span>
+                    <span>Leaderboard</span>
                   </a>
-                </span>
+                </span> -->
               </div>
             </div>
           </div>
@@ -173,212 +157,17 @@
   </section>
 
 
-  <section class="hero teaser">
+
+  <!-- <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
         <h2 class="subtitle has-text-centered">
           LoT-insts contains over 25k classes whose frequencies are naturally long-tail distributed. Its test set from four different subsets: many-, medium-, and few-shot sets, 
           as well as a zero-shot open set. To our best knowledge, this is the first natural language dataset that focuses on this long-tailed and open classification problem.
         </h2>
-        <img src="static/images/fig1-example.jpg">
       </div>
     </div>
-  </section>
-
-
-  <section class="section">
-    <div class="container is-max-desktop">
-      <!-- Abstract. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Abstract</h2>
-          <div class="content has-text-justified">
-            <p>
-              Real-world data usually exhibits a long-tailed distribution, 
-              with a few frequent labels and a lot of few-shot labels. The study of 
-              institution name normalization is a perfect application case showing this phenomenon: 
-              there are many institutions around the world with enormous variations of their names in the publicly available literature. 
-              In this work, we first collect a large-scale institution name normalization dataset LoT-insts, 
-              which containing over 25k classes whose frequencies are naturally long-tail distributed. 
-              We construct our test set from four different subsets: many-, medium-, and few-shot sets, 
-              as well as a zero-shot open set, which are meant to isolate the few-shot and zero-shot 
-              learning scenarios out from the massive many-shot classes. We also replicate several 
-              important baseline methods on our data, covering a wide range from search-based methods 
-              to neural network methods that use the pretrained BERT model. Further, we propose our specially pretrained,
-              BERT-based model that shows better out-of-distribution generalization on few-shot and zero-shot test sets. 
-              Compared to other datasets focusing on the longtailed phenomenon, our dataset has one order magnitude more 
-              training data than the largest existing long-tailed datasets and is naturally long-tailed rather than manually synthesized.
-              We believe it provides an important and different scenario to study this problem. 
-              To our best knowledge, this is the first natural language dataset that focuses on this long-tailed and open classification problem.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!--/ Abstract. -->
-    </div>
-  </section>
-
-
-  <section class="section">
-    <div class="container is-max-desktop">
-      <!-- Example. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Data Statistics and Examples</h2>
-          <div class="content has-text-justified">
-            <p>
-              DS-1000 contains 1000 problems originating from 451 unique StackOverflow problems.
-              To defend against potential memoriza- tion, more than half of the DS-1000 problems
-              are modified from the original StackOverflow problems; they include 152 surface
-              perturbations, 235 semantic perturbations, and 162 difficult rewrites.
-            </p>
-
-            <img src="static/images/statistics.jpg">
-
-            <p>
-              Below are more DS-1000 examples. For each example, The model needs to fill in the code
-              into “[insert]” in the prompt on the left; the code will then be executed to pass
-              the multi-criteria automatic evaluation, which includes the test cases and the
-              surface form constraints; a reference solution is provided at the bottom left.
-            </p>
-
-            <div class="tabs is-centered example_lst">
-              <ul>
-                <li class="is-active"><a title="NumPy">NumPy</a></li>
-                <li><a title="SciPy">SciPy</a></li>
-                <li><a title="Pandas">Pandas</a></li>
-                <li><a title="TensorFlow">TensorFlow</a></li>
-                <li><a title="PyTorch">PyTorch</a></li>
-                <li><a title="Scikit-learn">Scikit-learn</a></li>
-                <li><a title="Matplotlib">Matplotlib</a></li>
-              </ul>
-            </div>
-
-            <!-- <form>
-              <input type="radio" name="library" checked onclick=Click_2() title="NumPy">NumPy
-              <input type="radio" name="library" onclick=Click_2() title="SciPy">SciPy
-              <input type="radio" name="library" onclick=Click_2() title="Pandas">Pandas
-              <input type="radio" name="library" onclick=Click_2() title="TensorFlow">TensorFlow
-              <input type="radio" name="library" onclick=Click_2() title="PyTorch">PyTorch
-              <input type="radio" name="library" onclick=Click_2() title="Scikit-learn">Scikit-learn
-              <input type="radio" name="library" onclick=Click_2() title="Matplotlib">Matplotlib
-            </form> -->
-
-            <script type="text/javascript">
-              document.querySelectorAll(".example_lst li").forEach(e => {
-                e.addEventListener("click", Click_2)
-              })
-
-              function Click_2(eve)
-              {
-                const iTxt = eve.srcElement.innerText
-                for(let v of document.querySelectorAll(".example_lst a"))
-                {
-                  if(iTxt === v.innerText)
-                  {
-                    v.parentElement.className = "is-active";
-                  } else {
-                    v.parentElement.className = "";
-                  }
-                }
-                for(let block of document.getElementsByClassName('lib_examples'))
-                {
-                  block.style.display = (block.title === iTxt) ? 'block' : 'none';
-                }
-              }
-
-            </script>
-
-            <div title="NumPy" class="lib_examples" style="display: block;">
-              <img src="static/images/numpy_example.jpg">
-              <p>
-                NumPy example problem involving randomness, requiring the use of a specialist knowledge test.
-              </p>
-            </div>
-
-            <div title="SciPy" class="lib_examples" style="display: none;">
-              <img src="static/images/scipy_example.jpg">
-              <p>
-                An example problem of SciPy. Specific checking on conversion between dense matrix and sparse matrix.
-              </p>
-            </div>
-
-            <div title="Pandas" class="lib_examples" style="display: none;">
-              <img src="static/images/pandas_example.jpg">
-              <p>
-                An example problem of Pandas. We need to write reference solutions by ourselves
-                because high-vote replies from StackOverflow ignore the requirement "but does not exactly match it".
-              </p>
-            </div>
-
-            <div title="TensorFlow" class="lib_examples" style="display: none;">
-              <img src="static/images/tensorflow_example.jpg">
-              <p>
-                An example problem of TensorFlow. We implemented well-designed test function for tensor comparison.
-              </p>
-            </div>
-
-            <div title="PyTorch" class="lib_examples" style="display: none;">
-              <img src="static/images/pytorch_example.jpg">
-              <p>
-                An example problem of PyTorch, with failed attempt and error message given in description.
-              </p>
-            </div>
-
-            <div title="Scikit-learn" class="lib_examples" style="display: none;">
-              <img src="static/images/sklearn_example.jpg">
-              <p>
-                An example problem of Scikit-learn, requiring applying sklearn preprocessing method to Pandas dataframe.
-              </p>
-            </div>
-
-            <div title="Matplotlib" class="lib_examples" style="display: none;">
-              <img src="static/images/matplotlib_example.jpg">
-              <p>
-                An example problem of Matplotlib. Matplotlib original questions often contain example figures which cannot be
-                processed by current code models. We rewrite original questions into standalone questions in the form of comments.
-              </p>
-            </div>
-
-          </div>
-        </div>
-      </div>
-      <!--/ Example. -->
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container is-max-desktop">
-      <!-- Comparison. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Comparison</h2>
-          <div class="content has-text-justified">
-            <p>
-              Table 4 compares DS-1000 to other datasets. Notably, the average of problem words in DS-1000
-              is much larger compared to other data science related datasets (e.g., DSP and CoNaLa).
-            </p>
-            <p>
-              More importantly, the problems in DS-1000 represent more diverse and
-              naturalistic intent and context formats that cannot be seen in any other datasets.
-            </p>
-            <p>
-              Unlike generic Python code generation benchmarks (MBPP and HumanEval),
-              we note that data science code generation benchmarks have fewer test cases since the annotators need
-              to define program inputs with complex objects such as square matrices, classifiers, or dataframes than
-              simple primitives, such as floats or lists.
-            </p>
-            <p>
-              Nevertheless, even a few test cases suffice for DS-1000 – only 1.8% of
-              the Codex-002-predicted solutions accepted by our evaluation are incorrect.
-            </p>
-            <img src="static/images/comparison.png">
-          </div>
-        </div>
-      </div>
-      <!--/ Comparison. -->
-    </div>
-  </section>
+  </section> -->
 
 
   <section>
@@ -544,11 +333,82 @@
     </div>
   </section>
 
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Real-world data usually exhibits a long-tailed distribution, 
+              with a few frequent labels and a lot of few-shot labels. The study of 
+              institution name normalization is a perfect application case showing this phenomenon: 
+              there are many institutions around the world with enormous variations of their names in the publicly available literature. 
+              In this work, we first collect a large-scale institution name normalization dataset LoT-insts, 
+              which containing over 25k classes whose frequencies are naturally long-tail distributed. 
+              We construct our test set from four different subsets: many-, medium-, and few-shot sets, 
+              as well as a zero-shot open set, which are meant to isolate the few-shot and zero-shot 
+              learning scenarios out from the massive many-shot classes. We also replicate several 
+              important baseline methods on our data, covering a wide range from search-based methods 
+              to neural network methods that use the pretrained BERT model. Further, we propose our specially pretrained,
+              BERT-based model that shows better out-of-distribution generalization on few-shot and zero-shot test sets. 
+              Compared to other datasets focusing on the longtailed phenomenon, our dataset has one order magnitude more 
+              training data than the largest existing long-tailed datasets and is naturally long-tailed rather than manually synthesized.
+              We believe it provides an important and different scenario to study this problem. 
+              To our best knowledge, this is the first natural language dataset that focuses on this long-tailed and open classification problem.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Example. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Data Statistics and Examples</h2>
+          <div class="content has-text-justified">
+            <p>
+              LoT-insts contains over 25k classes whose frequencies are naturally long-tail distributed. Its test set from four different subsets: many-, medium-, and few-shot sets, 
+              as well as a zero-shot open set. To our best knowledge, this is the first natural language dataset that focuses on this long-tailed and open classification problem.
+            </p>
+
+            <img src="static/images/dataset.png">
+
+            <p>
+              We partitioned the dataset into different subsets for training and evaluation. The open test set was collected by randomly sampling 2% of the categories. Thus the model will not see any examples from these categories during training. For the two close test set and valid set, we randomly sample 2% of the examples from the remaining data for each of the sets. To better handle few-shot categories, we conduct extra steps to ensure that there is at least one example in training set for each category in the test set, and the test set covers as many categories as possible.
+            </p>
+
+            <img src="static/images/statistics.png">
+
+          </div>
+        </div>
+      </div>
+      <!--/ Example. -->
+    </div>
+  </section>
+
+  <section class="section" id="Submit">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-body">
+        <h2 class="title">Instructions for Reporting Your Results</h2>
+        <p>Please send your result and paper link to this email, we will update your results. Thank you. </p>
+      </div>
+    </div>
+  </section>
+
+
   <section class="section" id="Acknowledgement">
     <div class="container is-max-desktop content">
       <div class="bibtex-body">
         <h2 class="title">Acknowledgement</h2>
-        <p>We thank <a href="http://nasmith.github.io/">Noah A. Smith</a>, <a href="http://tianbaoxie.com/">Tianbao Xie</a>, <a href="http://scholar.google.com/citations?user=slwTiOUAAAAJ&hl=zh-CN&oi=ao">Shuyang Jiang</a> for their helpful feedback on this work.</p>
+        <p>We thank Dawei Yu for his help for our code repository.</p>
       </div>
     </div>
   </section>
@@ -557,13 +417,12 @@
     <div class="container is-max-desktop content">
       <div class="bibtex-body">
         <h2 class="title">BibTeX</h2>
-        <pre><code>@article{Lai2022DS1000,
-  title={Text Classiﬁcation in the Wild: A Large-Scale Long-Tailed Name Normalization Dataset},
-  author={Yuhang Lai and Chengxi Li and Yiming Wang and Tianyi Zhang and Ruiqi Zhong and Luke Zettlemoyer and Scott Wen-tau Yih and Daniel Fried and Sida Wang and Tao Yu},
-  journal={ArXiv},
-  year={2022},
-  volume={abs/2211.11501}
-}</code></pre>
+        <pre><code>@article{Qi2023Text,
+          title={Text Classification in the Wild: a Large-scale Long-tailed Name Normalization Dataset},
+          author={Jiexing Qi and Shuhao Li and Zhixin Guo and Yusheng Huang and Chenghu Zhou and Weinan Zhang and Xinbing Wang and Zhouhan Lin},
+          journal={ArXiv},
+          year={2023},
+        }</code></pre>
       </div>
     </div>
   </section>
